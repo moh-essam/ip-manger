@@ -246,23 +246,6 @@ class Subnet:
         return utilized_ips / total_ips * 100
 
 
-subnet_1 = Subnet('192.0.2.0', '28', None, 'test1')
-subnet_2 = Subnet('8.20.15.1', '32', None, 'test2')
-
-
-'''
-Actions:
-- Add Subnet
-- Remove Subnet
-- View subnets
-- View IP
-- Reserve IP
-- Reserve any IP
-- Assign VLan Id to subnet
-- Delete VLan Id for subnet
-
-'''
-
 guide = '''use a command to perform action...
 available commands:
 - help
