@@ -19,8 +19,6 @@ class IP:
         return 'IP ' + self.address + ' reserved successfully.'
 
 
-        
-
 class Subnet:
     # Type: IP(address, status)
     occupied_ips = []
@@ -34,7 +32,7 @@ class Subnet:
     zip_iterator = zip(VlanIds, VlanIds_statuses)
     VlanIds_dict = dict(zip_iterator)
     
-
+    
     def __init__(self, address, mask, vLanId, name):
         self.address = address
         self.mask = mask
@@ -45,7 +43,6 @@ class Subnet:
         Subnet.update_occupied_ips(self, self.ip_range)
 
     # Print all subnets
-    
     def view_subnets():
         template = Template('Subnet: $name \n IP: $ipadd \n Mask: $mask \n VlanId: $vlan \n Utilization: $utilization')
         for s in Subnet.subnets: 
@@ -94,8 +91,6 @@ class Subnet:
         print("--------------------------------")
         print(template.substitute(name = s.name, ipadd = s.address, mask = s.mask, vlan = s.vLanId, utilization = s.utilization, occupied_ips = list_of_occ_ips ))
         print("--------------------------------")
-
-
 
 
     # In: Subnet        -       Action: remove the subnet
